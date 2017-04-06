@@ -23,4 +23,5 @@ function extend(extended,extensor,deeply=false){//extended,extensor,deeply
 /*
 console.dir(extend({a:1},{a:2}));
 console.dir(extend({a:{num:3}},{a:2},true));
+console.dir(extend({a:{num:{z:3}}},{a:{num:{z:4}}},true));
 */
