@@ -1,0 +1,20 @@
+function isObject(e){return toString(e)==='[object Object]'}
+//
+function extend(a,b,c){
+ var f=isObject, x=a, o=b, p, m=Object.keys(o), e, v;
+ if(m.length!==0){
+	for(p of m){
+	 e=x[p];
+	 v=o[p];
+	 if(c!==false && f(e) && f(v)){
+		extend(e,v,true)
+	 }else{
+		x[p]=v
+	 }
+	}
+ };
+ return x
+}
+//
+var e=Function.prototype, callable=e.bind.bind(e.call), toString=callable(Object.prototype.toString);
+
